@@ -1,0 +1,683 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+h1{
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 80px;
+}
+h2{
+    font-size: 48px;
+    color: #2D25A0;
+}
+h3{
+    font-size: 28px;
+    font-weight: 700;
+}
+p{
+    font-size: 16px;
+    color: #6C6C6C;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+/*-- Home Page/Header --*/
+
+header{
+    width: 100%;
+    height: 610px;
+    background-color: #2D25A0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+.home{
+    width: 1260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.half-width{
+    min-width: 50%;
+    margin: 0 50px;
+    transition: .5s;
+}
+@keyframes slide-show{
+    15%{
+        margin-left: 0;
+    }
+    20%{
+        margin-left: -556px;
+    }
+    35%{
+        margin-left: -556px;
+    }
+    40%{
+        margin-left: -1080px;
+    }
+    55%{
+        margin-left: -1080px;
+    }
+    60%{
+        margin-left: -1520px;
+    }
+    75%{
+        margin-left: -1520px;
+    }
+    80%{
+        margin-left: -2220px;
+    }
+    95%{
+        margin-left: -2220px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+
+}
+.animation{
+    width: 556px;
+    height: 456px;
+    overflow: hidden;
+}
+.slide{
+    display: flex;
+    /* animation-name: slide-show; */
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+header:hover .half-width{
+    transform: scale(1.05);
+}
+.home-banner{
+    width: 556px;
+    height:456px;
+}
+
+.button{
+    padding: 10px 24px;
+    margin-top: 27px;
+    border: none;
+    background-color:#E02C6D;
+    cursor: pointer;
+    transition: .5s;
+}
+.button:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #E02C6D;
+}
+.button a{
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+/*-- Players Info --*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.players-info{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.player{
+    width: 330px;
+    height: 474px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.player div{
+    padding: 15px;
+}
+.player > div >h3{
+    margin: 10px 0;
+}
+
+/*-- Matches Fixture --*/
+
+.container{
+    margin-bottom: 70px;
+}
+.container > h2{
+    text-align: center;
+}
+.league-matches{
+    margin: 20px 0;
+}
+.league-matches h3{
+    padding: 10px 0px 10px 20px;
+    color: white;
+    background-color: #2D25A0;
+}
+.match-info{
+    width: 1050px;
+    display: flex;
+}
+
+.fixture-box{
+    width: 100%;
+    display: flex;
+    border: 2px solid gray;
+    padding: 15px;
+}
+.teams-name{
+    width: 70%;
+}
+.teams-name > div{
+    display: flex;
+    align-items: center;
+}
+.match-time{
+    border-left: 2px solid gray;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.team-logo{
+    width: 30px;
+    padding: 10px 10px;
+}
+
+/*-- Match News --*/
+
+.match-news{
+    width: 1150px;
+    display: flex;
+    margin-bottom: 70px;
+}
+#news-banner{
+    width: 100%;
+}
+
+/*-- Footer --*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    text-align: center;
+}
+footer img{
+    width: 480px;
+    height: 110px;
+}
+.social-contact{
+    display: flex;
+    margin: 20px 0;
+}
+.social-contact div{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background-color: #E7E7E8;
+    border-radius: 20px;
+    margin: 0 14px 0 0;
+    display: flex;
+}
+.social-contact div i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #969BAB;
+}
+
+/*-- Matches Highlights --*/
+
+.container > h2{
+    text-align: center;
+    margin: 30px 0;
+}
+.match-highlights{
+    width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 15px;
+    border-radius: 5px;
+}
+.highlight{
+    display: flex;
+    width: 340px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    height: 410px;
+    border-radius: 5px;
+    transition: .5s;
+}
+.highlight:hover{
+    transform: scale(1.05);
+}
+.highlight > div{
+    padding: 15px;
+}
+
+/*---------------------------
+-------- Media Query --------
+----------------------------*/
+
+/*-- For Mobile Devices --*/
+
+@media only screen and (max-width: 600px){
+    h1{
+        font-size: 36px;
+        line-height: 50px;
+    }
+    h2{
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    /*-- Home Page/Header --*/
+
+    header{
+        width: 100%;
+        height: 695px;
+        margin-bottom: 47px;
+    }
+    header:hover .half-width{
+        transform: scale(1.05);
+    }
+    .home{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .half-width{
+        width: 90%;
+        margin: 25px 15px 25px 15px;
+    }
+    @keyframes slide-show{
+        15%{
+            margin-left: 0;
+        }
+        20%{
+            margin-left: -105%;
+        }
+        35%{
+            margin-left: -105%;
+        }
+        40%{
+            margin-left: -200%;
+        }
+        55%{
+            margin-left: -200%;
+        }
+        60%{
+            margin-left: -280%;
+        }
+        75%{
+            margin-left: -280%;
+        }
+        80%{
+            margin-left: -390%;
+        }
+        95%{
+            margin-left: -390%;
+        }
+        100%{
+            margin-left: 0px;
+        }
+    }
+    .animation{
+        width: 95%;
+        height:260px;
+        overflow: hidden;
+    }
+    .slide{
+        display: flex;
+        animation-name: slide-show;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    .home-banner{
+        max-width: 100%;
+        max-height: 260px;
+    }
+
+    /*-- Players Info --*/
+
+    .players-info{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 24px;
+        margin-bottom: 47px;
+    }
+
+    /*-- Match Fixture --*/
+
+    .match-info{
+        flex-direction: column;
+        width: 100%;
+    }
+    .fixture-box{
+        margin: 5px 0;
+        padding: 5px;
+        width: calc(100% - 10px);
+        border-radius: 5px;
+        border: none;
+        box-shadow: 1px 1px 5px gray;
+    }
+    .league-matches h3{
+        border-radius: 5px;
+    }
+    .teams-name{
+        width: 60%;
+    }
+    .match-time{
+        width: 40%;
+    }
+
+    /*-- Match News --*/
+
+    .match-news{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 47px;
+    }
+
+    /*-- Match Highlight --*/
+
+    .container{
+        margin-bottom: 47px;
+    }
+    .match-highlights{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    /*-- Footer --*/
+
+    footer img{
+        width: 260px;
+        height: 63px;
+    }
+}
+
+/*-- For Tablets --*/
+
+@media only screen and (min-width: 601px) and (max-width: 768px){
+    h1{
+        font-size: 64px;
+        line-height: 80px;
+    }
+    h2{
+        font-size: 48px;
+    }
+
+    /*-- Home Page/Header --*/
+
+    header{
+        width: 100%;
+        height: 895px;
+        margin-bottom: 60px;
+    }
+    header:hover .half-width{
+        transform: scale(1.03);
+    }
+    .home{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .half-width{
+        width: 70%;
+        margin: 25px 15px 25px 15px;
+    }
+    @keyframes slide-show{
+        15%{
+            margin-left: 0;
+        }
+        20%{
+            margin-left: -105%;
+        }
+        35%{
+            margin-left: -105%;
+        }
+        40%{
+            margin-left: -200%;
+        }
+        55%{
+            margin-left: -200%;
+        }
+        60%{
+            margin-left: -280%;
+        }
+        75%{
+            margin-left: -280%;
+        }
+        80%{
+            margin-left: -390%;
+        }
+        95%{
+            margin-left: -390%;
+        }
+        100%{
+            margin-left: 0px;
+        }
+    }
+    .animation{
+        width: 100%;
+        max-height: 520px;
+        overflow: hidden;
+    }
+    .slide{
+        display: flex;
+        animation-name: slide-show; 
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    .home-banner{
+        max-width: 100%;
+        max-height: 520px;
+    }
+
+    /*-- Players Info --*/
+
+    .players-info{
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        grid-gap: 28px;
+        margin-bottom: 60px;
+    }
+
+    /*-- Match Fixture --*/
+
+    .match-info{
+        flex-direction: column;
+        width: 100%;
+    }
+    .fixture-box{
+        margin: 5px 0;
+        padding: 5px;
+        width: calc(100% - 10px);
+        border-radius: 5px;
+        border: none;
+        box-shadow: 1px 1px 5px gray;
+    }
+    .league-matches h3{
+        border-radius: 5px;
+    }
+    .teams-name{
+        width: 65%;
+    }
+    .match-time{
+        width: 35%;
+    }
+    
+    /*-- Match News --*/
+
+    .match-news{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+     /*-- Match Highlight --*/
+
+     .container{
+        margin-bottom: 60px;
+    }
+    .match-highlights{
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    /*-- Footer --*/
+
+    footer img{
+        width: 520px;
+        height: 126px;
+    }
+}
+
+/*-- For Small Screen Laptops/iPad Pro --*/
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    h1{
+        font-size: 64px;
+        line-height: 80px;
+    }
+    h2{
+        font-size: 48px;
+    }
+
+    /*-- Home Page/Header --*/
+
+    header{
+        width: 100%;
+        height: 1195px;
+        margin-bottom: 60px;
+    }
+    header:hover .half-width{
+        transform: scale(1.03);
+    }
+    .home{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .half-width{
+        width: 70%;
+        margin: 25px 15px 25px 15px;
+    }
+    @keyframes slide-show{
+        15%{
+            margin-left: 0;
+        }
+        20%{
+            margin-left: -100%;
+        }
+        35%{
+            margin-left: -100%;
+        }
+        40%{
+            margin-left: -200%;
+        }
+        55%{
+            margin-left: -200%;
+        }
+        60%{
+            margin-left: -280%;
+        }
+        75%{
+            margin-left: -280%;
+        }
+        80%{
+            margin-left: -370%;
+        }
+        95%{
+            margin-left: -370%;
+        }
+        100%{
+            margin-left: 0px;
+        }
+    }
+    .animation{
+        width: 100%;
+        height: 640px;
+        overflow: hidden;
+    }
+    .slide{
+        width: 100%;
+        display: flex;
+        animation-name: slide-show; 
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    .home-banner{
+        width: 100%;
+        height: 640px;
+    }
+
+    /*-- Players Info --*/
+
+    .players-info{
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        grid-gap: 28px;
+        margin-bottom: 60px;
+    }
+
+    /*-- Match Fixture --*/
+
+    .match-info{
+        flex-direction: column;
+        width: 100%;
+    }
+    .fixture-box{
+        margin: 5px 0;
+        padding: 5px;
+        width: calc(100% - 10px);
+        border-radius: 5px;
+        border: none;
+        box-shadow: 1px 1px 5px gray;
+    }
+    .league-matches h3{
+        border-radius: 5px;
+    }
+    .teams-name{
+        width: 65%;
+    }
+    .match-time{
+        width: 35%;
+    }
+
+    /*-- Match News --*/
+
+    .match-news{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*-- Match Highlight --*/
+
+    .container{
+        margin-bottom: 60px;
+    }
+    .match-highlights{
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+    }
+
+    /*-- Footer --*/
+
+    footer img{
+        width: 520px;
+        height: 126px;
+    }
+}
