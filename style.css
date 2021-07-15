@@ -85,7 +85,7 @@ header{
 }
 .slide{
     display: flex;
-    /* animation-name: slide-show; */
+    animation-name: slide-show;
     animation-duration: 10s;
     animation-iteration-count: infinite;
 }
